@@ -56,6 +56,8 @@ if (argv_vals["--origin"] || argv_vals["--referer"] || argv_vals["--useragent"] 
 
   if (argv_vals["--origin"]) {
     argv_vals["--req-headers"]["origin"] = argv_vals["--origin"]
+  } else {
+    argv_vals["--req-headers"]["origin"] = "https://hls-js.netlify.app"
   }
   if (argv_vals["--referer"]) {
     argv_vals["--req-headers"]["referer"] = argv_vals["--referer"]
